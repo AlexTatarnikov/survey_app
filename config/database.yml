@@ -1,0 +1,20 @@
+development: &development
+  adapter: postgresql
+  encoding: unicode
+  database: survey_app_development
+  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
+  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
+  username: <%= ENV.fetch("DB_USER") { 'postgres' } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { 'postgres' } %>
+
+test:
+  <<: *development
+  database: survey_app_test
+
+staging:
+  <<: *development
+  database: survey_app_staging
+
+production:
+  <<: *development
+  database: survey_app_production

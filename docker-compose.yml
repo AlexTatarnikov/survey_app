@@ -1,0 +1,50 @@
+version: '2'
+
+services:
+  data:
+    image: alpine
+    volumes:
+      - /var/lib/postgresql/data
+    command: "/bin/true"
+
+  cache:
+    image: alpine
+    volumes:
+      - /usr/src/app/node_modules
+      - /usr/src/app/public/packs
+      - /usr/src/app/public/packs-test
+      - /usr/src/app/.node-gyp
+    command: "/bin/true"
+
+  db:
+    image: postgres:10.1-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data
+    logging:
+      driver: none
+
+  web:
+    environment:
+      DB_HOST: db
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      WEBPACKER_DEV_SERVER_PORT: 3035
+    build: .
+    stdin_open: true
+    depends_on:
+      - db
+    command: bash -c "bin/webpack-dev-server & bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/public/packs
+      - /usr/src/app/public/packs-test
+      - /usr/src/app/.node-gyp
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+    ports:
+      - 3000:3000
+      - 3035:3035
+    depends_on:
+      - db
