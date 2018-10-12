@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_001551) do
 
   create_table "summaries", force: :cascade do |t|
     t.bigint "survey_id", null: false
-    t.json "answers", default: "{}", null: false
+    t.json "answers", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

@@ -4,4 +4,6 @@ class Question < ApplicationRecord
   enum kind: [:number, :radio, :text, :checkbox, :rating]
 
   validates :title, presence: true
+
+  scope :required, -> { where(required: true) }
 end
