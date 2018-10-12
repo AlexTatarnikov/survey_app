@@ -11,6 +11,12 @@ class Api::V1::Users::SummariesController < Api::V1::BaseController
     end
   end
 
+  def show
+    @summary = current_user.summaries.find_by!(survey_id: params[:survey_id])
+
+    respond_with(SummarySerializer.new(@summary).serializable_hash)
+  end
+
   private
 
   def summary_params

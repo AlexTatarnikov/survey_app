@@ -63,4 +63,25 @@ resource 'Summary' do
       expect(status).to eq(422)
     end
   end
+
+  get 'api/v1/users/surveys/:survey_id/summary' do
+    let(:summary) { create :summary, user: user }
+    let(:survey_id) { summary.survey_id }
+
+    example_request 'Show' do
+      expect(status).to eq(200)
+      expect(parsed_body).to eq(
+        {
+          data: {
+            id: summary.id.to_s,
+            type: 'summary',
+            attributes: {
+              survey_id: survey_id,
+              answers: summary.answers.deep_symbolize_keys
+            }
+          }
+        }
+      )
+    end
+  end
 end

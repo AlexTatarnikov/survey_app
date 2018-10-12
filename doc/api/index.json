@@ -17,6 +17,13 @@
           "groups": "all",
           "route": "api/v1/users/surveys/:survey_id/summary",
           "method": "post"
+        },
+        {
+          "description": "Show",
+          "link": "summary/show.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/summary",
+          "method": "get"
         }
       ]
     },
