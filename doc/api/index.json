@@ -1,28 +1,28 @@
 {
   "resources": [
     {
-      "name": "Summary",
+      "name": "Response",
       "explanation": null,
       "examples": [
         {
           "description": "Create",
-          "link": "summary/create.json",
+          "link": "response/create.json",
           "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/summary",
+          "route": "api/v1/users/surveys/:survey_id/response",
           "method": "post"
         },
         {
           "description": "Create - errors",
-          "link": "summary/create_-_errors.json",
+          "link": "response/create_-_errors.json",
           "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/summary",
+          "route": "api/v1/users/surveys/:survey_id/response",
           "method": "post"
         },
         {
           "description": "Show",
-          "link": "summary/show.json",
+          "link": "response/show.json",
           "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/summary",
+          "route": "api/v1/users/surveys/:survey_id/response",
           "method": "get"
         }
       ]

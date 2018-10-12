@@ -14,25 +14,25 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/v1/surveys/217",
+      "request_path": "api/v1/surveys/13",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjY5MzAsInN1YiI6NDQwfQ.2VhJhCcgl1qkWKzwfFzNfZv7gESA_hlUUC8lHKqcagQ"
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjgyMDYsInN1YiI6MTd9.4KtOuM49wgJD-M1ijv2VLLow1cJClW5c7eWpnAQEI7o"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"217\",\n    \"type\": \"survey\",\n    \"attributes\": {\n      \"id\": 217,\n      \"title\": \"Twelfth Doctor #4\",\n      \"subtitle\": \"Bunk beds are cool, a bed with a ladder, you can't beat that!\"\n    },\n    \"relationships\": {\n      \"questions\": {\n        \"data\": [\n          {\n            \"id\": \"174\",\n            \"type\": \"question\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"174\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 174,\n        \"kind\": \"text\",\n        \"required\": true,\n        \"title\": \"Earth: Mostly Harmless\",\n        \"placeholder\": \"Let's go, pal.\",\n        \"choices\": [\n          \"Krabby\"\n        ]\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"13\",\n    \"type\": \"survey\",\n    \"attributes\": {\n      \"id\": 13,\n      \"title\": \"Eleventh Doctor #4\",\n      \"subtitle\": \"Never ignore coincidence. Unless, of course, you’re busy. In which case, always ignore coincidence.\"\n    },\n    \"relationships\": {\n      \"questions\": {\n        \"data\": [\n          {\n            \"id\": \"12\",\n            \"type\": \"question\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"12\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 12,\n        \"kind\": \"checkbox\",\n        \"required\": true,\n        \"title\": \"Evolution? they said to themselves, Who needs it?\",\n        \"placeholder\": \"Democracy is non-negotiable\",\n        \"choices\": [\n          \"Golem\",\n          \"Venusaur\",\n          \"Articuno\"\n        ]\n      }\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"76b08bbd62d0abd428ffee558b21ab9b\"",
+        "ETag": "W/\"121315fd51e13b0f2ac9788291aaffc8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "04d7f07c-34d4-40a7-8ea1-d720e333f058",
-        "X-Runtime": "0.003729",
-        "Content-Length": "419"
+        "X-Request-Id": "80aa9219-a622-4d5e-8bc6-3bdb5867f943",
+        "X-Runtime": "0.003614",
+        "Content-Length": "520"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
