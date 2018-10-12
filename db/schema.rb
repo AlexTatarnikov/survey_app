@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_231321) do
+ActiveRecord::Schema.define(version: 2018_10_11_233943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2018_10_11_231321) do
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
+  create_table "summaries", force: :cascade do |t|
+    t.bigint "survey_id", null: false
+    t.json "answers", default: "{}", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_summaries_on_survey_id"
+  end
+
   create_table "surveys", force: :cascade do |t|
     t.string "title", null: false
     t.string "subtitle", null: false
@@ -36,4 +44,5 @@ ActiveRecord::Schema.define(version: 2018_10_11_231321) do
   end
 
   add_foreign_key "questions", "surveys"
+  add_foreign_key "summaries", "surveys"
 end
