@@ -1,0 +1,6 @@
+en:
+  errors:
+    requests:
+      bad_request: 'Bad Request'
+    sign_in:
+      not_found: 'Incorrect email or password.'
