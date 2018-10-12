@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_233943) do
+ActiveRecord::Schema.define(version: 2018_10_12_001551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,10 @@ ActiveRecord::Schema.define(version: 2018_10_11_233943) do
     t.json "answers", default: "{}", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["survey_id", "user_id"], name: "index_summaries_on_survey_id_and_user_id", unique: true
     t.index ["survey_id"], name: "index_summaries_on_survey_id"
+    t.index ["user_id"], name: "index_summaries_on_user_id"
   end
 
   create_table "surveys", force: :cascade do |t|
@@ -43,6 +46,17 @@ ActiveRecord::Schema.define(version: 2018_10_11_233943) do
     t.index ["title"], name: "index_surveys_on_title", unique: true
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
   add_foreign_key "questions", "surveys"
   add_foreign_key "summaries", "surveys"
+  add_foreign_key "summaries", "users"
 end

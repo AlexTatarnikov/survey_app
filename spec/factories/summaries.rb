@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :summary do
     survey
+    user
 
     before(:create) do |summary|
       question = create(:question, survey: summary.survey)
