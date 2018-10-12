@@ -1,6 +1,39 @@
 {
   "resources": [
     {
+      "name": "Summary",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create",
+          "link": "summary/create.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/summary",
+          "method": "post"
+        },
+        {
+          "description": "Create - errors",
+          "link": "summary/create_-_errors.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/summary",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Survey",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Show",
+          "link": "survey/show.json",
+          "groups": "all",
+          "route": "api/v1/surveys/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "User",
       "explanation": null,
       "examples": [

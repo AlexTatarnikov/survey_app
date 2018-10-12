@@ -1,0 +1,47 @@
+{
+  "resource": "Summary",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/surveys/:survey_id/summary",
+  "description": "Create",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "summary",
+      "required": true,
+      "name": "answers",
+      "description": "Answers"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/surveys/163/summary",
+      "request_body": "summary[answers][128][title]=Parts+of+the+inside+of+her+head+screamed+at+other+parts+of+the+inside+of+her+head.&summary[answers][128][kind]=text&summary[answers][128][placeholder]=I%27ve+seen+soldiers+come+and+go.+Some+were+brave.+Some+were+honest.+Some+were+even+heroic.+But+I%27ve+never+called+any+of+them+a+friend.&summary[answers][128][choices][]=Weezing&summary[answers][128][choices][]=Oddish&summary[answers][128][choices][]=Seaking&summary[answers][128][choices][]=Cloyster&summary[answers][128][value]=Oddish",
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjY1NDAsInN1YiI6MzUwfQ.trInrcI9SFlzDvi6lTZSAczww523tkMbyEm7DXcFIvo",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"81\",\n    \"type\": \"summary\",\n    \"attributes\": {\n      \"survey_id\": 163,\n      \"answers\": {\n        \"128\": {\n          \"title\": \"Parts of the inside of her head screamed at other parts of the inside of her head.\",\n          \"kind\": \"text\",\n          \"placeholder\": \"I've seen soldiers come and go. Some were brave. Some were honest. Some were even heroic. But I've never called any of them a friend.\",\n          \"choices\": [\n            \"Weezing\",\n            \"Oddish\",\n            \"Seaking\",\n            \"Cloyster\"\n          ],\n          \"value\": \"Oddish\"\n        }\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ccdec900053a7f20683c709c6706a844\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "f80a993a-2ac9-48ed-ac84-8ec2aeb88346",
+        "X-Runtime": "0.017475",
+        "Content-Length": "414"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

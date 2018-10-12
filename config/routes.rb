@@ -4,6 +4,10 @@ Rails.application.routes.draw do
       namespace :users do
         post 'tokens' => 'tokens#create'
         post 'registrations' => 'registrations#create'
+
+        resources :surveys, only: [] do
+          resource :summary, only: [:create, :show]
+        end
       end
 
       resources :surveys, only: [:show]

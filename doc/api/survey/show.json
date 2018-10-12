@@ -1,0 +1,41 @@
+{
+  "resource": "Survey",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/surveys/:id",
+  "description": "Show",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/surveys/165",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjY1NDAsInN1YiI6MzUyfQ.tgcSrSPLbomszdlwrxIhQjmJ4-NGXA9xz7-fdl_CRjo"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"165\",\n    \"type\": \"survey\",\n    \"attributes\": {\n      \"id\": 165,\n      \"title\": \"Eleventh Doctor #3\",\n      \"subtitle\": \"This is my timey-wimey detector. It goes 'ding' when there's stuff.\"\n    },\n    \"relationships\": {\n      \"questions\": {\n        \"data\": [\n          {\n            \"id\": \"130\",\n            \"type\": \"question\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"130\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 130,\n        \"kind\": \"checkbox\",\n        \"required\": true,\n        \"title\": \"If they don’t keep exercising their lips, he thought, their brains start working.\",\n        \"placeholder\": \"That means you're, erm... two centuries late for dinner! Perhaps I could whip you up a snack? You must be famished!\",\n        \"choices\": [\n          \"Nidorina\",\n          \"Farfetch'd\"\n        ]\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7a3ae76133d9dc581b924a63a09e7660\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "fe1ab7c9-1784-4990-a28c-20de3f500e52",
+        "X-Runtime": "0.003927",
+        "Content-Length": "607"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
