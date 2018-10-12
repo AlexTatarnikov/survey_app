@@ -3,7 +3,7 @@ class Api::V1::Users::RegistrationsController < Api::V1::BaseController
     @user = User.new(user_params)
 
     if @user.save
-      respond_with({ jwt: @user.authentication_token }, status: 200 )
+      respond_with({ jwt: @user.authentication_token }, status: 200)
     else
       respond_with_error(@user)
     end

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
         post 'tokens' => 'tokens#create'
         post 'registrations' => 'registrations#create'
       end
+
+      resources :surveys, only: [:show]
     end
   end
 
