@@ -1,0 +1,52 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/tokens",
+  "description": "Get auth token",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "sign_in",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "sign_in",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/tokens",
+      "request_body": "sign_in[email]=batman%40gotham.com&sign_in[password]=password",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjI0NzgsInN1YiI6ODV9.JKBvXqGChFUl7mNQtLzzN2fprylL1HqMMc_7TRRTJ7Q\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7ea6694d94d7a6bd16fb98f35286cc1e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "396365a9-c559-428e-aa92-48cc83376698",
+        "X-Runtime": "0.003680",
+        "Content-Length": "127"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

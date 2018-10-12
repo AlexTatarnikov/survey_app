@@ -1,0 +1,64 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/registrations",
+  "description": "Creating a user account",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "sign_up",
+      "required": true,
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "scope": "sign_up",
+      "required": true,
+      "name": "first_name",
+      "description": "First Name"
+    },
+    {
+      "scope": "sign_up",
+      "required": true,
+      "name": "last_name",
+      "description": "Last Name"
+    },
+    {
+      "scope": "sign_up",
+      "required": true,
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/registrations",
+      "request_body": "sign_up[email]=sasha%40grey.com&sign_up[first_name]=Sasha&sign_up[last_name]=Grey&sign_up[password]=password",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk0NjI0NzgsInN1YiI6ODR9.M28jClplLB1ip_HjzobmjSOM56toFMcmb3-r4Uk_xsI\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"73bb560cb477508fbde5fb4fc3c6bfa7\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "bbe050a4-fb86-4c59-b330-83fd26ab6313",
+        "X-Runtime": "0.016150",
+        "Content-Length": "127"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

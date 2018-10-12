@@ -44,6 +44,7 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
   config.include ActiveJob::TestHelper
+  config.include ResponseHelper
 
 
   # RSpec Rails can automatically mix in different behaviours to your tests
