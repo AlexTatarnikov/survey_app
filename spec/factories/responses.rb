@@ -1,12 +1,12 @@
 FactoryBot.define do
-  factory :summary do
+  factory :response do
     survey
     user
 
-    before(:create) do |summary|
-      question = create(:question, survey: summary.survey)
+    before(:create) do |response|
+      question = create(:question, survey: response.survey)
 
-      summary.answers = {
+      response.answers = {
         question.id => {
           title: question.title,
           kind: question.kind,

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
         post 'registrations' => 'registrations#create'
 
         resources :surveys, only: [] do
-          resource :summary, only: [:create, :show]
+          resource :response, only: [:create, :show]
         end
       end
 

@@ -1,15 +1,15 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
-resource 'Summary' do
+resource 'Response' do
   let(:user) { create :user }
   let(:token) { user.authentication_token }
 
   header 'accept', 'application/json'
   header 'Authorization', :token
 
-  post 'api/v1/users/surveys/:survey_id/summary' do
-    with_options scope: :summary, required: true do
+  post 'api/v1/users/surveys/:survey_id/response' do
+    with_options scope: :response, required: true do
       parameter :answers, 'Answers'
     end
 
@@ -36,7 +36,7 @@ resource 'Summary' do
         {
           data: {
             id: an_instance_of(String),
-            type: 'summary',
+            type: 'response',
             attributes: {
               survey_id: survey.id,
               answers: {
@@ -55,29 +55,29 @@ resource 'Summary' do
     end
   end
 
-  post 'api/v1/users/surveys/:survey_id/summary' do
-    let(:summary) { create :summary, user: user }
-    let(:survey_id) { summary.survey_id }
+  post 'api/v1/users/surveys/:survey_id/response' do
+    let(:response) { create :response, user: user }
+    let(:survey_id) { response.survey_id }
 
-    example_request 'Create - errors', summary: {answers: ''} do
+    example_request 'Create - errors', response: {answers: ''} do
       expect(status).to eq(422)
     end
   end
 
-  get 'api/v1/users/surveys/:survey_id/summary' do
-    let(:summary) { create :summary, user: user }
-    let(:survey_id) { summary.survey_id }
+  get 'api/v1/users/surveys/:survey_id/response' do
+    let(:response) { create :response, user: user }
+    let(:survey_id) { response.survey_id }
 
     example_request 'Show' do
       expect(status).to eq(200)
       expect(parsed_body).to eq(
         {
           data: {
-            id: summary.id.to_s,
-            type: 'summary',
+            id: response.id.to_s,
+            type: 'response',
             attributes: {
               survey_id: survey_id,
-              answers: summary.answers.deep_symbolize_keys
+              answers: response.answers.deep_symbolize_keys
             }
           }
         }

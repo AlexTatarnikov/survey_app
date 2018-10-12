@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 2018_10_12_001551) do
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
-  create_table "summaries", force: :cascade do |t|
+  create_table "responses", force: :cascade do |t|
     t.bigint "survey_id", null: false
     t.json "answers", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
-    t.index ["survey_id", "user_id"], name: "index_summaries_on_survey_id_and_user_id", unique: true
-    t.index ["survey_id"], name: "index_summaries_on_survey_id"
-    t.index ["user_id"], name: "index_summaries_on_user_id"
+    t.index ["survey_id", "user_id"], name: "index_responses_on_survey_id_and_user_id", unique: true
+    t.index ["survey_id"], name: "index_responses_on_survey_id"
+    t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
   create_table "surveys", force: :cascade do |t|
@@ -57,6 +57,6 @@ ActiveRecord::Schema.define(version: 2018_10_12_001551) do
   end
 
   add_foreign_key "questions", "surveys"
-  add_foreign_key "summaries", "surveys"
-  add_foreign_key "summaries", "users"
+  add_foreign_key "responses", "surveys"
+  add_foreign_key "responses", "users"
 end
