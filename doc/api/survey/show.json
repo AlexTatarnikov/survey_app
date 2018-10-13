@@ -2,7 +2,7 @@
   "resource": "Survey",
   "resource_explanation": null,
   "http_method": "GET",
-  "route": "api/v1/surveys/:id",
+  "route": "api/v1/surveys",
   "description": "Show",
   "explanation": null,
   "parameters": [
@@ -14,25 +14,25 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/v1/surveys/17",
+      "request_path": "api/v1/surveys",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTMzMzYsInN1YiI6MjV9.-LsUbcV5FYuThXMYfHqzCMkddv5CUeoTh13L75fX3i0"
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTg4OTIsInN1YiI6OTB9.ZX2AV8ouGWCr3-_9WJ3h-2obSwYAifrXPUDDGtiIlKg"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"17\",\n    \"type\": \"survey\",\n    \"attributes\": {\n      \"id\": 17,\n      \"title\": \"Thirteenth Doctor #4\",\n      \"subtitle\": \"Bunk beds are cool, a bed with a ladder, you can't beat that!\"\n    },\n    \"relationships\": {\n      \"questions\": {\n        \"data\": [\n          {\n            \"id\": \"16\",\n            \"type\": \"question\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"16\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 16,\n        \"kind\": \"rating\",\n        \"required\": true,\n        \"title\": \"if you’ve never been through a matter transference beam before you’ve probably lost some salt and protein. The beer you had should have cushioned your system a bit.\",\n        \"placeholder\": \"Nothing to impede progress. If you want to see the fate of democracies, look out the windows.\",\n        \"choices\": [\n          \"Exeggutor\"\n        ]\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"62\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Sixth Doctor #5\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"313c0360521d2ec3b2928cf2c35c94f0\"",
+        "ETag": "W/\"9c7d965f8a46a4754fde465cf707a213\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f60bb528-52e5-41c9-8d2a-84d88806437e",
-        "X-Runtime": "0.004817",
-        "Content-Length": "647"
+        "X-Request-Id": "1afd81f5-e41b-4bb2-817c-0d3f3f72b001",
+        "X-Runtime": "0.001593",
+        "Content-Length": "98"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

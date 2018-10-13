@@ -4,13 +4,13 @@ require 'rspec_api_documentation/dsl'
 resource 'Survey' do
   let(:user) { create :user }
   let(:token) { user.authentication_token }
+  let(:survey) { create :survey }
+  let!(:question) { create :question, survey: survey }
 
   header 'accept', 'application/json'
   header 'Authorization', :token
 
   get 'api/v1/surveys/:id' do
-    let(:survey) { create :survey }
-    let!(:question) { create :question, survey: survey }
     let(:id) { survey.id }
 
     example_request 'Show' do
@@ -49,6 +49,26 @@ resource 'Survey' do
          ]
         }
       )
+    end
+  end
+
+  get 'api/v1/surveys' do
+    example_request 'Show' do
+      expect(status).to eq(200)
+      expect(parsed_body).to eq(
+        {
+          data: [
+            {
+              id: survey.id.to_s,
+              type: 'survey',
+              attributes: {
+                title: survey.title,
+              },
+              relationships: {}
+            }
+          ]
+        }
+     )
     end
   end
 end

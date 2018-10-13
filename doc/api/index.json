@@ -37,6 +37,13 @@
           "groups": "all",
           "route": "api/v1/surveys/:id",
           "method": "get"
+        },
+        {
+          "description": "Show",
+          "link": "survey/show.json",
+          "groups": "all",
+          "route": "api/v1/surveys",
+          "method": "get"
         }
       ]
     },
