@@ -10,6 +10,11 @@ Rails.application.routes.draw do
         end
       end
 
+      namespace :admins do
+        post 'tokens' => 'tokens#create'
+        post 'registrations' => 'registrations#create'
+      end
+
       resources :surveys, only: [:index, :show]
     end
   end

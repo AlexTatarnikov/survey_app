@@ -1,6 +1,47 @@
 {
   "resources": [
     {
+      "name": "Admin",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Creating a user account",
+          "link": "admin/creating_a_user_account.json",
+          "groups": "all",
+          "route": "api/v1/admins/registrations",
+          "method": "post"
+        },
+        {
+          "description": "Creating a user account - errors",
+          "link": "admin/creating_a_user_account_-_errors.json",
+          "groups": "all",
+          "route": "api/v1/admins/registrations",
+          "method": "post"
+        },
+        {
+          "description": "Get auth token",
+          "link": "admin/get_auth_token.json",
+          "groups": "all",
+          "route": "api/v1/admins/tokens",
+          "method": "post"
+        },
+        {
+          "description": "Get auth token - errors",
+          "link": "admin/get_auth_token_-_errors.json",
+          "groups": "all",
+          "route": "api/v1/admins/tokens",
+          "method": "post"
+        },
+        {
+          "description": "Get auth token - errors - bad request",
+          "link": "admin/get_auth_token_-_errors_-_bad_request.json",
+          "groups": "all",
+          "route": "api/v1/admins/tokens",
+          "method": "post"
+        }
+      ]
+    },
+    {
       "name": "Response",
       "explanation": null,
       "examples": [

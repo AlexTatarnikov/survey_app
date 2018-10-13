@@ -19,11 +19,11 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/v1/users/surveys/348/response",
-      "request_body": "response[answers][316][title]=If+they+don%E2%80%99t+keep+exercising+their+lips%2C+he+thought%2C+their+brains+start+working.&response[answers][316][kind]=number&response[answers][316][placeholder]=Who+do+you+think+actually+won+the+war%3F+No+one%2C+I+guess.&response[answers][316][choices][]=Tentacruel&response[answers][316][choices][]=Butterfree&response[answers][316][choices][]=Clefairy&response[answers][316][value]=Clefairy",
+      "request_path": "api/v1/users/surveys/41/response",
+      "request_body": "response[answers][37][title]=Parts+of+the+inside+of+her+head+screamed+at+other+parts+of+the+inside+of+her+head.&response[answers][37][kind]=text&response[answers][37][placeholder]=Patrolling+the+Mojave+almost+makes+you+wish+for+a+nuclear+winter.&response[answers][37][choices][]=Cubone&response[answers][37][choices][]=Kabuto&response[answers][37][choices][]=Seadra&response[answers][37][choices][]=Wartortle&response[answers][37][value]=Cubone",
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzM3NDYsInN1YiI6NDk2fQ.0LdyEBzKAUV673yCCXtbpxjO_zWcWYe4njZ0ZCJlEAg",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzQ3MTUsInN1YiI6NTd9.VobA4E-IA0Ia5f_hNk7EcNJ1wsKA15WybAaQUvkzZzk",
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "request_query_parameters": {
@@ -31,14 +31,14 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"265\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 348,\n      \"answers\": {\n        \"316\": {\n          \"title\": \"If they don’t keep exercising their lips, he thought, their brains start working.\",\n          \"kind\": \"number\",\n          \"placeholder\": \"Who do you think actually won the war? No one, I guess.\",\n          \"choices\": [\n            \"Tentacruel\",\n            \"Butterfree\",\n            \"Clefairy\"\n          ],\n          \"value\": \"Clefairy\"\n        }\n      }\n    },\n    \"relationships\": {\n      \"survey\": {\n        \"data\": {\n          \"id\": \"348\",\n          \"type\": \"survey\"\n        }\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"348\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Sixth Doctor #1\",\n        \"subtitle\": \"Do what I do. Hold tight and pretend it’s a plan!\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"33\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 41,\n      \"answers\": {\n        \"37\": {\n          \"title\": \"Parts of the inside of her head screamed at other parts of the inside of her head.\",\n          \"kind\": \"text\",\n          \"placeholder\": \"Patrolling the Mojave almost makes you wish for a nuclear winter.\",\n          \"choices\": [\n            \"Cubone\",\n            \"Kabuto\",\n            \"Seadra\",\n            \"Wartortle\"\n          ],\n          \"value\": \"Cubone\"\n        }\n      }\n    },\n    \"relationships\": {\n      \"survey\": {\n        \"data\": {\n          \"id\": \"41\",\n          \"type\": \"survey\"\n        }\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"41\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Fourth Doctor #1\",\n        \"subtitle\": \"Aw, I wanted to be ginger! I've never been ginger!\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"975167b00022cd09d8642b94b4eef43c\"",
+        "ETag": "W/\"558b38fec10b448a99512e35534d2454\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "0b641c4c-ffad-48fd-817d-aa0fa63c4aaf",
-        "X-Runtime": "0.019462",
-        "Content-Length": "572"
+        "X-Request-Id": "9ec46027-3ae8-458e-89c7-0c9d7e37f645",
+        "X-Runtime": "0.014901",
+        "Content-Length": "574"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
