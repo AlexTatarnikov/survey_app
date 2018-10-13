@@ -19,7 +19,7 @@
       },
       surveyUrl(survey) {
         if(survey.relationships.response.data) {
-          return `users/surveys/${survey.relationships.response.data.id}/response`
+          return `users/surveys/${survey.id}/response`
         }
         else {
           return `surveys/${survey.id}`

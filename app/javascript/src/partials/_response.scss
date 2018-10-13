@@ -1,0 +1,15 @@
+.response {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+
+  .answers {
+    margin-top: 60px;
+
+    .answer {
+      .quote {
+        font-style: italic;
+      }
+    }
+  }
+}

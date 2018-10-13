@@ -14,9 +14,6 @@
           <router-link tag="li" to="/" class="nav-item" exact-active-class="active">
             <a class="nav-link">Surveys</a>
           </router-link>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Responses</a>
-          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">

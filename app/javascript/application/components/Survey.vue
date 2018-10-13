@@ -63,7 +63,7 @@
           newResponse.answers[question.id].value = this.response.answers[question.id]
         }
         this.$store.dispatch('response/submitResponse', newResponse).then(() => {
-          this.$router.push('/')
+          this.$router.push(`/users/surveys/${this.survey.id}/response`)
         })
       }
     }

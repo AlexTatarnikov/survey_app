@@ -1,16 +1,16 @@
 import Vue from 'vue/dist/vue.esm'
 
 export default {
-  getSurveys (callback) {
+  getSurveys (reject, callback) {
     let url = `/api/v1/surveys`
 
     Vue.http.get(url)
-      .then((r) => callback(r.data.data), e => console.error(e));
+      .then((r) => callback(r.data.data), e => reject(e));
   },
-  getSurvey(id, callback) {
+  getSurvey(id, reject, callback) {
     let url = `/api/v1/surveys/${id}`
 
     Vue.http.get(url)
-      .then((r) => callback(r.data), e => console.error(e));
+      .then((r) => callback(r.data), e => reject(e));
   }
 }

@@ -16,11 +16,10 @@ const mutations = {
 const actions = {
   getSurveys ({ commit, state }) {
     return new Promise((resolve, reject) => {
-      SurveyApi.getSurveys((surveys) => {
+      SurveyApi.getSurveys(reject, (surveys) => {
         commit('setSurveys', surveys);
+        resolve()
       })
-
-      resolve()
     })
   }
 }

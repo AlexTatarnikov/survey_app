@@ -27,17 +27,16 @@ const mutations = {
 const actions = {
   signIn ({ commit, state }, { email, password }) {
     return new Promise((resolve, reject) => {
-      AuthenticationApi.postSignIn(email, password, token => {
+      AuthenticationApi.postSignIn(email, password, reject, token => {
         commit('setToken', token);
         commit('setInfo', { email });
+        resolve()
       })
-
-      resolve()
     })
   },
   signUp ({ commit, state }, { email, password, first_name, last_name }) {
     return new Promise((resolve, reject) => {
-      AuthenticationApi.postSignUp(email, password, first_name, last_name, token => {
+      AuthenticationApi.postSignUp(email, password, first_name, last_name, reject, token => {
         commit('setToken', token);
         commit('setInfo', { email, first_name, last_name });
         resolve()
