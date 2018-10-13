@@ -1,0 +1,41 @@
+{
+  "resource": "Response",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/users/surveys/:survey_id/response",
+  "description": "Show",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/users/surveys/16/response",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTMzMzYsInN1YiI6MjR9.B5z-Tuu5WwpuTRbGnfCbOf-oqeir4MOKbZJ0TNEb_-k"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"13\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 16,\n      \"answers\": {\n        \"15\": {\n          \"title\": \"But Mr. Dent, the plans have been available in the local planning office for the last nine months.\",\n          \"kind\": \"text\",\n          \"placeholder\": \"Well, ain't we all, right? That was a long time ago. I don't pay it much mind anymore.\",\n          \"choices\": [\n            \"Zubat\",\n            \"Scyther\",\n            \"Vileplume\"\n          ],\n          \"value\": \"Vileplume\"\n        }\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"428c70ec2f81b8af60326801988d1634\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "80597b07-137e-4334-abbc-86189330874f",
+        "X-Runtime": "0.002129",
+        "Content-Length": "375"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

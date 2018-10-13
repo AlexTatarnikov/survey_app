@@ -1,0 +1,41 @@
+{
+  "resource": "Response",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/surveys/:survey_id/response",
+  "description": "Create - errors",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/surveys/15/response",
+      "request_body": "response[answers]=",
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTMzMzYsInN1YiI6MjN9.WH2JqXx4AB58WcMmsIvGWrFYRgw8szpmMN2Fw3FDoQA",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"answers\": \"can't be blank\",\n    \"survey_id\": \"has already been taken\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "2415feb8-4221-43b2-ad95-a52aa41cf6cb",
+        "X-Runtime": "0.003983",
+        "Content-Length": "76"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

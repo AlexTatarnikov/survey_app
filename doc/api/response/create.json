@@ -1,0 +1,47 @@
+{
+  "resource": "Response",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/surveys/:survey_id/response",
+  "description": "Create",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "response",
+      "required": true,
+      "name": "answers",
+      "description": "Answers"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/surveys/14/response",
+      "request_body": "response[answers][13][title]=It+seemed+to+me+that+any+civilization+that+had+so+far+lost+its+head+as+to+need+to+include+a+set+of+detailed+instructions+for+use+in+a+packet+of+toothpicks%2C+was+no+longer+a+civilization+in+which+I+could+live+and+stay+sane.&response[answers][13][kind]=number&response[answers][13][placeholder]=I%27m+a+synth.+Synthetic+man.+All+the+parts%2C+minus+a+few+red+blood+cells.&response[answers][13][choices][]=Onix&response[answers][13][value]=Onix",
+      "request_headers": {
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTMzMzYsInN1YiI6MjJ9.MJd62NwQBDP_-yqvUj1LcNhhhp1SsQUIANbi5mMURLw",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"11\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 14,\n      \"answers\": {\n        \"13\": {\n          \"title\": \"It seemed to me that any civilization that had so far lost its head as to need to include a set of detailed instructions for use in a packet of toothpicks, was no longer a civilization in which I could live and stay sane.\",\n          \"kind\": \"number\",\n          \"placeholder\": \"I'm a synth. Synthetic man. All the parts, minus a few red blood cells.\",\n          \"choices\": [\n            \"Onix\"\n          ],\n          \"value\": \"Onix\"\n        }\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"39930749fc9464847ae1278cc9b9ed58\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "71e42619-0387-4b66-96cc-f654c6459963",
+        "X-Runtime": "0.038212",
+        "Content-Length": "457"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
