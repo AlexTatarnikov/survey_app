@@ -4,12 +4,15 @@ import App from './components/App.vue'
 import routes from './routes'
 import store from './store'
 import VueResource from 'vue-resource'
+import StarRating from 'vue-star-rating'
 
 // Assets
 import '../src/applications.scss'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+
+Vue.component('star-rating', StarRating);
 
 const router = new VueRouter({
   mode: 'history',

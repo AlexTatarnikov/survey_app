@@ -1,5 +1,5 @@
 <template>
-  <input type="text" class="form-control" v-model="response.answers[question.id]" :id="question.id" :placeholder="question.attributes.placeholder" v-bind:required="{ required: question.attributes.required }">
+  <star-rating v-model="response.answers[question.id]" :star-size="40" :show-rating="false"></star-rating>
 </template>
 
 <script>
