@@ -3,6 +3,9 @@ import Vuex from 'vuex'
 import VuexPersist from 'vuex-persist'
 import current_user from './modules/current_user'
 import surveys from './modules/surveys'
+import survey from './modules/survey'
+import response from './modules/response'
+
 
 Vue.use(Vuex)
 
@@ -16,7 +19,9 @@ const debug = process.env.NODE_ENV !== 'production'
 export default new Vuex.Store({
   modules: {
     current_user,
-    surveys
+    surveys,
+    survey,
+    response
   },
   strict: debug,
   plugins: [vuexPersist.plugin]

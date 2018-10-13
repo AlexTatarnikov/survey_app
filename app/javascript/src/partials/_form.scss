@@ -41,3 +41,12 @@
     font-size: 14px;
   }
 }
+
+.form-group.required > label:after {
+  content:"*";
+  color: red;
+}
+
+.form-group {
+  margin-top: 20px;
+}

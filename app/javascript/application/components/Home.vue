@@ -1,9 +1,9 @@
 <template>
   <div class="survey">
     <div class="list-group text-center">
-      <a href="#" class="list-group-item list-group-item-action" v-for="survey in $store.state.surveys.all">
+      <router-link :to="surveyUrl(survey)" class="list-group-item list-group-item-action" v-for="survey in $store.state.surveys.all" :key="survey.id">
         {{ survey.attributes.title }}
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
@@ -16,6 +16,14 @@
     methods: {
       loadData() {
         this.$store.dispatch('surveys/getSurveys')
+      },
+      surveyUrl(survey) {
+        if(survey.relationships.response.data) {
+          return `users/surveys/${survey.relationships.response.data.id}/response`
+        }
+        else {
+          return `surveys/${survey.id}`
+        }
       }
     }
   }

@@ -11,9 +11,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Surveys</a>
-          </li>
+          <router-link tag="li" to="/" class="nav-item" exact-active-class="active">
+            <a class="nav-link">Surveys</a>
+          </router-link>
           <li class="nav-item">
             <a class="nav-link" href="#">Responses</a>
           </li>
