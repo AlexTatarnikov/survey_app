@@ -14,7 +14,8 @@ class Api::V1::Users::ResponsesController < Api::V1::BaseController
   def show
     @response = current_user.responses.find_by!(survey_id: params[:survey_id])
 
-    respond_with(ResponseSerializer.new(@response).serializable_hash)
+    respond_with(ResponseSerializer.new(@response, include: %i[survey],
+                                        fields: { survey: %i[title subtitle] }).serializable_hash)
   end
 
   private

@@ -48,6 +48,14 @@ resource 'Response' do
                   value: answer
                 }
               }
+            },
+            relationships: {
+              survey: {
+                data: {
+                  id: survey_id.to_s,
+                  type: 'survey'
+                }
+              }
             }
           }
         }
@@ -78,8 +86,27 @@ resource 'Response' do
             attributes: {
               survey_id: survey_id,
               answers: response.answers.deep_symbolize_keys
+            },
+            relationships: {
+              survey: {
+                data: {
+                  id: survey_id.to_s,
+                  type: 'survey'
+                }
+              }
             }
-          }
+          },
+          included: [
+            {
+              id: survey_id.to_s,
+              type: 'survey',
+              attributes: {
+                title: response.survey.title,
+                subtitle: response.survey.subtitle,
+              },
+              relationships: {}
+            }
+          ]
         }
       )
     end
