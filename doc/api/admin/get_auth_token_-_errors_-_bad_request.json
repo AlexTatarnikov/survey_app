@@ -1,8 +1,8 @@
 {
-  "resource": "User",
+  "resource": "Admin",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "api/v1/users/tokens",
+  "route": "api/v1/admins/tokens",
   "description": "Get auth token - errors - bad request",
   "explanation": null,
   "parameters": [
@@ -25,7 +25,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/v1/users/tokens",
+      "request_path": "api/v1/admins/tokens",
       "request_body": "{\"sign_in\":null}",
       "request_headers": {
         "Content-Type": "application/json",
@@ -40,8 +40,8 @@
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "84aac540-964c-4a75-87e5-712bb607a7ee",
-        "X-Runtime": "0.000530",
+        "X-Request-Id": "bae4f799-c18e-442e-8413-876482ca1740",
+        "X-Runtime": "0.000534",
         "Content-Length": "72"
       },
       "response_content_type": "application/json; charset=utf-8",

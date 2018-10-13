@@ -42,29 +42,22 @@
       ]
     },
     {
-      "name": "Response",
+      "name": "Admin/Survey",
       "explanation": null,
       "examples": [
         {
           "description": "Create",
-          "link": "response/create.json",
+          "link": "admin/survey/create.json",
           "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/response",
+          "route": "api/v1/admins/surveys",
           "method": "post"
         },
         {
           "description": "Create - errors",
-          "link": "response/create_-_errors.json",
+          "link": "admin/survey/create_-_errors.json",
           "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/response",
+          "route": "api/v1/admins/surveys",
           "method": "post"
-        },
-        {
-          "description": "Show",
-          "link": "response/show.json",
-          "groups": "all",
-          "route": "api/v1/users/surveys/:survey_id/response",
-          "method": "get"
         }
       ]
     },
@@ -126,6 +119,33 @@
           "groups": "all",
           "route": "api/v1/users/tokens",
           "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "User/Response",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create",
+          "link": "user/response/create.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/response",
+          "method": "post"
+        },
+        {
+          "description": "Create - errors",
+          "link": "user/response/create_-_errors.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/response",
+          "method": "post"
+        },
+        {
+          "description": "Show",
+          "link": "user/response/show.json",
+          "groups": "all",
+          "route": "api/v1/users/surveys/:survey_id/response",
+          "method": "get"
         }
       ]
     }

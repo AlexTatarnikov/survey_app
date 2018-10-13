@@ -38,24 +38,24 @@
     {
       "request_method": "POST",
       "request_path": "api/v1/users/registrations",
-      "request_body": "sign_up[email]=sasha%40grey.com&sign_up[first_name]=Sasha&sign_up[last_name]=Grey&sign_up[password]=password",
+      "request_body": "{\"sign_up\":{\"email\":\"sasha@grey.com\",\"first_name\":\"Sasha\",\"last_name\":\"Grey\",\"password\":\"password\"}}",
       "request_headers": {
-        "Accept": "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
-      "request_content_type": "application/x-www-form-urlencoded",
+      "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzQ3MTUsInN1YiI6NjJ9.tttRLW4wo1LjiXdqOHeTJMRkZcyXNoIGhQcH30krJmI\"\n}",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MjQ2fQ.7aIutjI5BF27aezhomYOsbIGEqbljYXBChxb23U0KZ8\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f6268c1010a9bad579ab573d7d77162a\"",
+        "ETag": "W/\"2d4dfb9326c913b424418e7b79f0db40\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6d3e7468-3fdb-40fb-a8dd-55f196308a16",
-        "X-Runtime": "0.003761",
-        "Content-Length": "127"
+        "X-Request-Id": "24ed5ad9-03d7-4571-af3e-bc75f1558d8b",
+        "X-Runtime": "0.007496",
+        "Content-Length": "129"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

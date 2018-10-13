@@ -7,6 +7,7 @@ resource 'Survey' do
   let(:survey) { create :survey }
   let!(:question) { create :question, survey: survey }
 
+  header 'content-type', 'application/json'
   header 'accept', 'application/json'
   header 'Authorization', :token
 

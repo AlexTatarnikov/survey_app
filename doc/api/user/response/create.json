@@ -1,0 +1,47 @@
+{
+  "resource": "User/Response",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/users/surveys/:survey_id/response",
+  "description": "Create",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "response",
+      "required": true,
+      "name": "answers",
+      "description": "Answers"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/users/surveys/203/response",
+      "request_body": "{\"response\":{\"answers\":{\"191\":{\"title\":\"If there's anything more important than my ego around, I want it caught and shot now.\",\"kind\":\"checkbox\",\"placeholder\":\"If you want to see the fate of democracies, just look out the window\",\"choices\":[\"Vileplume\",\"Geodude\",\"Gengar\"],\"value\":\"Geodude\"}}}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MjQ3fQ.JhzMidxb-7phrtYNX8DJOuPPUPjbl1jg8QlDI-YmTDw"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"135\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 203,\n      \"answers\": {\n        \"191\": {\n          \"title\": \"If there's anything more important than my ego around, I want it caught and shot now.\",\n          \"kind\": \"checkbox\",\n          \"placeholder\": \"If you want to see the fate of democracies, just look out the window\",\n          \"choices\": [\n            \"Vileplume\",\n            \"Geodude\",\n            \"Gengar\"\n          ],\n          \"value\": \"Geodude\"\n        }\n      }\n    },\n    \"relationships\": {\n      \"survey\": {\n        \"data\": {\n          \"id\": \"203\",\n          \"type\": \"survey\"\n        }\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"203\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Tenth Doctor #3\",\n        \"subtitle\": \"Aw, I wanted to be ginger! I've never been ginger!\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"3e713781a2ee54379597e856e23c434e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "2a0e57bf-1ef2-4bfa-bebd-0c766e15f1b8",
+        "X-Runtime": "0.005374",
+        "Content-Length": "581"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

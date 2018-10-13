@@ -1,19 +1,19 @@
 {
-  "resource": "User",
+  "resource": "Admin",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "api/v1/users/tokens",
-  "description": "Get auth token",
+  "route": "api/v1/admins/registrations",
+  "description": "Creating a user account",
   "explanation": null,
   "parameters": [
     {
-      "scope": "sign_in",
+      "scope": "sign_up",
       "required": true,
       "name": "email",
       "description": "Email"
     },
     {
-      "scope": "sign_in",
+      "scope": "sign_up",
       "required": true,
       "name": "password",
       "description": "Password"
@@ -25,8 +25,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/v1/users/tokens",
-      "request_body": "{\"sign_in\":{\"email\":\"batman@gotham.com\",\"password\":\"password\"}}",
+      "request_path": "api/v1/admins/registrations",
+      "request_body": "{\"sign_up\":{\"email\":\"sasha@grey.com\",\"password\":\"password\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -34,16 +34,16 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MjUwfQ.D2qMB2q8qtIq1XXBFH7AsTpyXoiTP7qRrxKs2CkNtaw\"\n}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjMsInN1YiI6OTl9.VMtsA_BPMV8wH8IEaD3-aNmCA5a7QRY1DGsm5GmBts8\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"9a8b2fc721524b9943a0f941be35f18d\"",
+        "ETag": "W/\"6a89ea5c5f5d115932195434d78e8802\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "d6ad89df-bcef-4de8-b5c3-c6422d524502",
-        "X-Runtime": "0.006390",
-        "Content-Length": "129"
+        "X-Request-Id": "3a87a27d-40e7-4b10-b074-9b66d61282a0",
+        "X-Runtime": "0.017803",
+        "Content-Length": "127"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -38,22 +38,22 @@
     {
       "request_method": "POST",
       "request_path": "api/v1/users/registrations",
-      "request_body": "sign_up[email]=sasha%40grey.com&sign_up[first_name]=Sasha&sign_up[last_name]=Grey&sign_up[password]=",
+      "request_body": "{\"sign_up\":{\"email\":\"sasha@grey.com\",\"first_name\":\"Sasha\",\"last_name\":\"Grey\",\"password\":\"\"}}",
       "request_headers": {
-        "Accept": "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       "request_query_parameters": {
       },
-      "request_content_type": "application/x-www-form-urlencoded",
+      "request_content_type": "application/json",
       "response_status": 422,
       "response_status_text": "Unprocessable Entity",
       "response_body": "{\n  \"errors\": {\n    \"password\": \"can't be blank\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "1a885d61-e176-46a1-a67b-57baa0a630d8",
-        "X-Runtime": "0.002038",
+        "X-Request-Id": "50439f6c-132e-4c2b-bf90-4a7428cc2025",
+        "X-Runtime": "0.001954",
         "Content-Length": "40"
       },
       "response_content_type": "application/json; charset=utf-8",

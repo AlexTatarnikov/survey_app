@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'User' do
+  header 'content-type', 'application/json'
   header 'accept', 'application/json'
 
   post 'api/v1/users/tokens' do

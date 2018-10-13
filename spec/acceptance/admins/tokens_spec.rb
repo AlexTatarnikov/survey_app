@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Admin' do
+  header 'content-type', 'application/json'
   header 'accept', 'application/json'
 
   post 'api/v1/admins/tokens' do

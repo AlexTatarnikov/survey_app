@@ -1,9 +1,9 @@
 {
-  "resource": "User",
+  "resource": "Admin",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "api/v1/users/tokens",
-  "description": "Get auth token - errors - bad request",
+  "route": "api/v1/admins/tokens",
+  "description": "Get auth token",
   "explanation": null,
   "parameters": [
     {
@@ -25,8 +25,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/v1/users/tokens",
-      "request_body": "{\"sign_in\":null}",
+      "request_path": "api/v1/admins/tokens",
+      "request_body": "{\"sign_in\":{\"email\":\"batman@gotham.com\",\"password\":\"password\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -34,15 +34,16 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 400,
-      "response_status_text": "Bad Request",
-      "response_body": "{\n  \"errors\": {\n    \"message\": \"param is missing or the value is empty: sign_in\"\n  }\n}",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MTAyfQ.fugbPgpiZ738jkZYfKKi-ACAQ2TydqWh1Wv-QtJwiHU\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-cache",
-        "X-Request-Id": "84aac540-964c-4a75-87e5-712bb607a7ee",
-        "X-Runtime": "0.000530",
-        "Content-Length": "72"
+        "ETag": "W/\"b3b4969188b3998fac6889f17bc9c474\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "80665187-83d2-4707-b229-8a533457930a",
+        "X-Runtime": "0.006337",
+        "Content-Length": "129"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

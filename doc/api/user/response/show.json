@@ -1,0 +1,42 @@
+{
+  "resource": "User/Response",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "api/v1/users/surveys/:survey_id/response",
+  "description": "Show",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "api/v1/users/surveys/205/response",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MjQ5fQ.EjcrCIofVfNBxqfo8GpWVi1rT279N2vbwmUTniy6Hf4"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"137\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 205,\n      \"answers\": {\n        \"193\": {\n          \"title\": \"there’s an infinite number of monkeys outside who want to talk to us about this script for Hamlet they’ve worked out.\",\n          \"kind\": \"text\",\n          \"placeholder\": \"Voice module online. Audio functionality test initialized. Designation: Liberty Prime. Mission: the liberation of Anchorage, Alaska.\",\n          \"choices\": [\n            \"Raticate\",\n            \"Kingler\"\n          ],\n          \"value\": \"Kingler\"\n        }\n      }\n    },\n    \"relationships\": {\n      \"survey\": {\n        \"data\": {\n          \"id\": \"205\",\n          \"type\": \"survey\"\n        }\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"205\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Ninth Doctor #5\",\n        \"subtitle\": \"Can you hold? I have to eat a biscuit.\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a04a5829ca202ab845bb33f885cce97e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "1873621b-057d-4037-bb85-336ada1033fa",
+        "X-Runtime": "0.002386",
+        "Content-Length": "655"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

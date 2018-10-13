@@ -1,19 +1,19 @@
 {
-  "resource": "User",
+  "resource": "Admin",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "api/v1/users/tokens",
-  "description": "Get auth token - errors - bad request",
+  "route": "api/v1/admins/registrations",
+  "description": "Creating a user account - errors",
   "explanation": null,
   "parameters": [
     {
-      "scope": "sign_in",
+      "scope": "sign_up",
       "required": true,
       "name": "email",
       "description": "Email"
     },
     {
-      "scope": "sign_in",
+      "scope": "sign_up",
       "required": true,
       "name": "password",
       "description": "Password"
@@ -25,8 +25,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "api/v1/users/tokens",
-      "request_body": "{\"sign_in\":null}",
+      "request_path": "api/v1/admins/registrations",
+      "request_body": "{\"sign_up\":{\"email\":\"sasha@grey.com\",\"password\":\"\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -34,15 +34,15 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 400,
-      "response_status_text": "Bad Request",
-      "response_body": "{\n  \"errors\": {\n    \"message\": \"param is missing or the value is empty: sign_in\"\n  }\n}",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"password\": \"can't be blank\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "84aac540-964c-4a75-87e5-712bb607a7ee",
-        "X-Runtime": "0.000530",
-        "Content-Length": "72"
+        "X-Request-Id": "e9ab7ef6-da66-4b4c-af28-a06d79231490",
+        "X-Runtime": "0.059047",
+        "Content-Length": "40"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

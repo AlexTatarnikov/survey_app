@@ -3,4 +3,6 @@ class Survey < ApplicationRecord
 
   validates :title, :subtitle, presence: true
   validates :title, uniqueness: true
+
+  accepts_nested_attributes_for :questions
 end

@@ -1,0 +1,102 @@
+{
+  "resource": "Admin/Survey",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/admins/surveys",
+  "description": "Create - errors",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "survey",
+      "required": true,
+      "name": "title",
+      "description": "Title"
+    },
+    {
+      "scope": "survey",
+      "required": true,
+      "name": "subtitle",
+      "description": "Subtitle"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_title",
+      "name": "title",
+      "description": "Title"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_kind",
+      "name": "kind",
+      "description": "Kind"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_placeholder",
+      "name": "placeholder",
+      "description": "Placeholder"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_required",
+      "name": "required",
+      "description": "Required"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_choices",
+      "name": "choices",
+      "description": "Choices"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/admins/surveys",
+      "request_body": "{\"survey\":{\"title\":null,\"subtitle\":\"This is my timey-wimey detector. It goes 'ding' when there's stuff.\",\"questions_attributes\":{\"1539449863\":{\"title\":\"In the beginning, the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.\",\"kind\":\"text\",\"placeholder\":\"We must find the men of science and institutes of learning, surely they are out there still.\",\"required\":true,\"choices\":[\"1\",\"2\",\"3\"]}}}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MTAxfQ.Ru-_oWVg3oT0hxMYstsOxWFl8gNCdufSBILbjKBtziU"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"title\": \"can't be blank\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "c61408e1-d9ae-44bf-b478-625762b60de5",
+        "X-Runtime": "0.002814",
+        "Content-Length": "37"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

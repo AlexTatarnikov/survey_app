@@ -1,0 +1,103 @@
+{
+  "resource": "Admin/Survey",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "api/v1/admins/surveys",
+  "description": "Create",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "survey",
+      "required": true,
+      "name": "title",
+      "description": "Title"
+    },
+    {
+      "scope": "survey",
+      "required": true,
+      "name": "subtitle",
+      "description": "Subtitle"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_title",
+      "name": "title",
+      "description": "Title"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_kind",
+      "name": "kind",
+      "description": "Kind"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_placeholder",
+      "name": "placeholder",
+      "description": "Placeholder"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_required",
+      "name": "required",
+      "description": "Required"
+    },
+    {
+      "scope": [
+        "survey",
+        "questions_attributes",
+        1539449863
+      ],
+      "method": "question_choices",
+      "name": "choices",
+      "description": "Choices"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/v1/admins/surveys",
+      "request_body": "{\"survey\":{\"title\":\"Third Doctor\",\"subtitle\":\"This is my timey-wimey detector. It goes 'ding' when there's stuff.\",\"questions_attributes\":{\"1539449863\":{\"title\":\"In the beginning, the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.\",\"kind\":\"text\",\"placeholder\":\"We must find the men of science and institutes of learning, surely they are out there still.\",\"required\":true,\"choices\":[\"1\",\"2\",\"3\"]}}}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MzYyNjQsInN1YiI6MTAwfQ.vD8diJtxNqkx7zbCC93gwpOOVzcgBBxekcTG6JT6iJc"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"200\",\n    \"type\": \"survey\",\n    \"attributes\": {\n      \"id\": 200,\n      \"title\": \"Third Doctor\",\n      \"subtitle\": \"This is my timey-wimey detector. It goes 'ding' when there's stuff.\"\n    },\n    \"relationships\": {\n      \"questions\": {\n        \"data\": [\n          {\n            \"id\": \"188\",\n            \"type\": \"question\"\n          }\n        ]\n      },\n      \"response\": {\n        \"data\": null\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"188\",\n      \"type\": \"question\",\n      \"attributes\": {\n        \"id\": 188,\n        \"kind\": \"text\",\n        \"required\": true,\n        \"title\": \"In the beginning, the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.\",\n        \"placeholder\": \"We must find the men of science and institutes of learning, surely they are out there still.\",\n        \"choices\": [\n          \"1\",\n          \"2\",\n          \"3\"\n        ]\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"66cd6a78e2badcc2320cba9c43b3c656\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "83fdfdc1-37ce-47a9-b6b5-09f08b9f442f",
+        "X-Runtime": "0.023435",
+        "Content-Length": "628"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

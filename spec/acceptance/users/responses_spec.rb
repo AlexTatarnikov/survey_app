@@ -1,10 +1,11 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
-resource 'Response' do
+resource 'User/Response' do
   let(:user) { create :user }
   let(:token) { user.authentication_token }
 
+  header 'content-type', 'application/json'
   header 'accept', 'application/json'
   header 'Authorization', :token
 
