@@ -5,7 +5,8 @@ class Api::V1::Users::ResponsesController < Api::V1::BaseController
     @response = current_user.responses.build(response_params)
 
     if @response.save
-      respond_with(ResponseSerializer.new(@response).serializable_hash)
+      respond_with(ResponseSerializer.new(@response, include: %i[survey],
+                                          fields: { survey: %i[title subtitle] }).serializable_hash)
     else
       respond_with_error(@response)
     end

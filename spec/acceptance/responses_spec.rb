@@ -57,7 +57,18 @@ resource 'Response' do
                 }
               }
             }
-          }
+          },
+          included: [
+            {
+              id: survey_id.to_s,
+              type: 'survey',
+              attributes: {
+                title: survey.title,
+                subtitle: survey.subtitle,
+              },
+              relationships: {}
+            }
+          ]
         }
       )
     end
