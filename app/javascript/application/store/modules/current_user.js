@@ -26,9 +26,13 @@ const mutations = {
 
 const actions = {
   signIn ({ commit, state }, { email, password }) {
-    AuthenticationApi.postSignIn(email, password, token => {
-      commit('setToken', token);
-      commit('setInfo', { email });
+    return new Promise((resolve, reject) => {
+      AuthenticationApi.postSignIn(email, password, token => {
+        commit('setToken', token);
+        commit('setInfo', { email });
+      })
+
+      resolve()
     })
   },
   signUp ({ commit, state }, { email, password, first_name, last_name }) {

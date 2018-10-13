@@ -20,7 +20,9 @@
     },
     methods: {
       signIn () {
-        this.$store.dispatch('current_user/signIn', { email: this.email, password: this.password })
+        this.$store.dispatch('current_user/signIn', { email: this.email, password: this.password }).then(() => {
+          this.$router.push('/')
+        })
       }
     }
   }
