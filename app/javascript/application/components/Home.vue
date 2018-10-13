@@ -1,16 +1,21 @@
 <template>
-  <a @click="logOut" href="#" v-if="$store.state.current_user.token">Log out</a>
-  <sign-in v-else></sign-in>
+  <div class="survey">
+    <div class="list-group text-center">
+      <a href="#" class="list-group-item list-group-item-action" v-for="survey in $store.state.surveys.all">
+        {{ survey.attributes.title }}
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
-  import SignIn from './SignIn.vue'
-
   export default {
-    components: { SignIn },
+    created(){
+      this.loadData()
+    },
     methods: {
-      logOut() {
-        this.$store.dispatch('current_user/logOut')
+      loadData() {
+        this.$store.dispatch('surveys/getSurveys')
       }
     }
   }

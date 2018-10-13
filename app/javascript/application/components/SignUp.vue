@@ -1,5 +1,5 @@
 <template>
-  <div class="form-signin">
+  <div class="form-signin text-center">
     <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
     <label for="email" class="sr-only">Email address</label>
     <input type="email" id="email" v-model="email" class="form-control" placeholder="Email address" required="" autofocus="">

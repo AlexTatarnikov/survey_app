@@ -19,6 +19,7 @@ const router = new VueRouter({
 Vue.http.interceptors.push(function(request, next) {
   Vue.http.headers.common['Content-Type'] = 'application/json';
   Vue.http.headers.common['Accept'] = 'application/json';
+  Vue.http.headers.common['Authorization'] = store.state.current_user.token
 
   next(function (response) {
     if(response.status == 401) {
