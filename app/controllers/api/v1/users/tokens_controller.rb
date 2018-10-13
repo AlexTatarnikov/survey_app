@@ -4,7 +4,6 @@ class Api::V1::Users::TokensController < Api::V1::BaseController
   end
 
   before_action :authenticate, only: [:create]
-  before_action :authenticate_user, only: [:update]
 
   def create
     render json: auth_token, status: :created

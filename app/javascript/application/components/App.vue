@@ -1,20 +1,25 @@
 <template>
-  <p>{{ message }}</p>
+  <router-view></router-view>
 </template>
 
-<script>
-export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
+<style>
+  html,
+  body {
+    height: 100%;
   }
-}
-</script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+  body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+  }
 </style>
