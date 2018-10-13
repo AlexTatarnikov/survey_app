@@ -30,6 +30,9 @@ resource 'Survey' do
                 data: [
                   {id: question.id.to_s, type: 'question'}
                 ]
+              },
+              response: {
+                data: nil
               }
             }
           },
@@ -53,6 +56,8 @@ resource 'Survey' do
   end
 
   get 'api/v1/surveys' do
+    let!(:response) { create :response, survey: survey, user: user }
+
     example_request 'Show' do
       expect(status).to eq(200)
       expect(parsed_body).to eq(
@@ -64,7 +69,14 @@ resource 'Survey' do
               attributes: {
                 title: survey.title,
               },
-              relationships: {}
+              relationships: {
+                response: {
+                  data: {
+                    id: response.id.to_s,
+                    type: 'response'
+                  }
+                }
+              }
             }
           ]
         }

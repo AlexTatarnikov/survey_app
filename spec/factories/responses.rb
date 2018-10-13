@@ -4,7 +4,7 @@ FactoryBot.define do
     user
 
     before(:create) do |response|
-      question = create(:question, survey: response.survey)
+      question = response.survey.questions.first || create(:question, survey: response.survey)
 
       response.answers = {
         question.id => {

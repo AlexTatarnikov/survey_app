@@ -2,7 +2,8 @@ class Api::V1::SurveysController < Api::V1::BaseController
   before_action :authenticate_user
 
   def index
-    respond_with(SurveySerializer.new(Survey.all, fields: { survey: [:title] }).serializable_hash)
+    respond_with(SurveySerializer.new(Survey.all, fields: { survey: [:title, :response] },
+                                      params: {current_user: current_user}).serializable_hash)
   end
 
   def show

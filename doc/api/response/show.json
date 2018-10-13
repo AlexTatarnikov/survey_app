@@ -14,25 +14,25 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "api/v1/users/surveys/60/response",
+      "request_path": "api/v1/users/surveys/165/response",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTg4OTIsInN1YiI6ODh9.UtOZ1HDeUh2JPDsOwlCOhIzFP7WrAlzYtxK9BTRHVAk"
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MjA4MzEsInN1YiI6MjM3fQ.jb-zJ7PFlOQJzB1cWNFU5Qez2eRC0DIPUZUHFsv1HTA"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"44\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 60,\n      \"answers\": {\n        \"55\": {\n          \"title\": \"According to the legends, the Magratheans lived most of their lives underground.\",\n          \"kind\": \"checkbox\",\n          \"placeholder\": \"Who do you think actually won the war? No one, I guess.\",\n          \"choices\": [\n            \"Gengar\",\n            \"Arcanine\",\n            \"Dewgong\",\n            \"Alakazam\"\n          ],\n          \"value\": \"Alakazam\"\n        }\n      }\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"119\",\n    \"type\": \"response\",\n    \"attributes\": {\n      \"survey_id\": 165,\n      \"answers\": {\n        \"151\": {\n          \"title\": \"It’s only half completed, I’m afraid – we haven’t even finished burying the artificial dinosaur skeletons in the crust yet.\",\n          \"kind\": \"checkbox\",\n          \"placeholder\": \"Well, ain't we all, right? That was a long time ago. I don't pay it much mind anymore.\",\n          \"choices\": [\n            \"Staryu\",\n            \"Sandslash\",\n            \"Magikarp\",\n            \"Hypno\",\n            \"Golem\"\n          ],\n          \"value\": \"Magikarp\"\n        }\n      }\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"98cc26a62a9b24aa0961b6514d3b911a\"",
+        "ETag": "W/\"56eaac7cc52229b46e66848ed8a18e81\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1586246a-f5de-4326-b8c6-8aa32c253946",
-        "X-Runtime": "0.001798",
-        "Content-Length": "340"
+        "X-Request-Id": "761a21b1-1125-46d6-a2ee-9ea46647fde0",
+        "X-Runtime": "0.001785",
+        "Content-Length": "432"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

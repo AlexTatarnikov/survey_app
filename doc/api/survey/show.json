@@ -18,21 +18,21 @@
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MTg4OTIsInN1YiI6OTB9.ZX2AV8ouGWCr3-_9WJ3h-2obSwYAifrXPUDDGtiIlKg"
+        "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1Mzk1MjA4MzEsInN1YiI6MjM5fQ.pS03pOQ0Wz0nMZu4TdyTBHsxECk-LG3eH6Zmra8nhVk"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"62\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Sixth Doctor #5\"\n      },\n      \"relationships\": {\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"167\",\n      \"type\": \"survey\",\n      \"attributes\": {\n        \"title\": \"Seventh Doctor #5\"\n      },\n      \"relationships\": {\n        \"response\": {\n          \"data\": {\n            \"id\": \"120\",\n            \"type\": \"response\"\n          }\n        }\n      }\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"9c7d965f8a46a4754fde465cf707a213\"",
+        "ETag": "W/\"33bb30130c6b96f33999094e57e2ee0c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1afd81f5-e41b-4bb2-817c-0d3f3f72b001",
-        "X-Runtime": "0.001593",
-        "Content-Length": "98"
+        "X-Request-Id": "17f9355a-6c45-42f2-997c-42437704c7df",
+        "X-Runtime": "0.002065",
+        "Content-Length": "151"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
