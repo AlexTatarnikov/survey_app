@@ -33,6 +33,10 @@ response page where user can see the survey questions with selected answers
 
 * You can check API documentation on your local machine http://localhost:3000/api/docs or at https://survey-app-sample.herokuapp.com/api/docs
 
+#### Creds
+
+* Admin: admin@example.com/password
+
 #### Notes
 
 * I decided to try [fast_jsonapi](https://github.com/Netflix/fast_jsonapi) instead of [active_model_serializers](https://github.com/rails-api/active_model_serializers) for this project,
