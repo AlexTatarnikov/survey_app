@@ -1,24 +1,42 @@
-# README
+# Survey App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A basic Survey App using rails 5.X framework with the following features where admin
+creates a survey and share survey URL with users. After survey submission redirect to a survey
+response page where user can see the survey questions with selected answers
 
-Things you may want to cover:
+#### Requirements:
 
-* Ruby version
+* Ruby/Rails versions
+    * ruby ~> '2.5.1'
+    * rails ~> '5.2.1'
 
 * System dependencies
+    * postgresql 10.1
 
-* Configuration
+#### Application init
 
-* Database creation
+* `bin/setup`
 
-* Database initialization
+#### HowTos
 
-* How to run the test suite
+* How to run the test suite: `bundle exec rspec`
+* Install all npm packages: `yarn install`
+* Add new npm package: `yarn add $package`
+* Regenerate API docs: `rake docs:generate`
+* Run server: `rails server`
 
-* Services (job queues, cache servers, search engines, etc.)
+#### API Documentation
 
-* Deployment instructions
+* You can check API documentation on your local machine http://localhost:3000/api/docs
 
-* ...
+#### Notes
+
+* I decided to try [fast_jsonapi](https://github.com/Netflix/fast_jsonapi) instead of [active_model_serializers](https://github.com/rails-api/active_model_serializers) for this project,
+  because it has really great performance in comparing to AMS. [Performance Document](https://github.com/Netflix/fast_jsonapi/blob/master/performance_methodology.md)
+
+* All front-end is written on Vue and it fits great for the small projects like this.
+
+* Instead of having User with role Guest or Admin, I've decoupled them into two separate models, Admin and User respectively. 
+I prefer to use the roles system only if it is really required, avoiding too much complexity in the single User model.
+
+*Version 14 October 2018*
