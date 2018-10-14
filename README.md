@@ -2,6 +2,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bcf83cea410462f094b9/maintainability)](https://codeclimate.com/github/AlexTatarnikov/survey_app/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bcf83cea410462f094b9/test_coverage)](https://codeclimate.com/github/AlexTatarnikov/survey_app/test_coverage)
 
+https://survey-app-sample.herokuapp.com
+
 A basic Survey App using rails 5.X framework with the following features where admin
 creates a survey and share survey URL with users. After survey submission redirect to a survey
 response page where user can see the survey questions with selected answers
@@ -29,7 +31,7 @@ response page where user can see the survey questions with selected answers
 
 #### API Documentation
 
-* You can check API documentation on your local machine http://localhost:3000/api/docs
+* You can check API documentation on your local machine http://localhost:3000/api/docs or at https://survey-app-sample.herokuapp.com/api/docs
 
 #### Notes
 
