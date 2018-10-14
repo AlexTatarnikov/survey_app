@@ -1,4 +1,6 @@
 # Survey App
+[![Maintainability](https://api.codeclimate.com/v1/badges/bcf83cea410462f094b9/maintainability)](https://codeclimate.com/github/AlexTatarnikov/survey_app/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bcf83cea410462f094b9/test_coverage)](https://codeclimate.com/github/AlexTatarnikov/survey_app/test_coverage)
 
 A basic Survey App using rails 5.X framework with the following features where admin
 creates a survey and share survey URL with users. After survey submission redirect to a survey
